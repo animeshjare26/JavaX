@@ -1,29 +1,27 @@
 package SortingAlgorithms;
 
+
+
 public class bubble {
 
     public static void bubbleSort(int arr[]){
 
-        for(int i =0; i < arr.length - 1;i++){
-            //if array is  already sorted ?
-            int swap = 0;
-            for(int j = 0; j < arr.length - 1 - i ; j++){
-
-                //swap
+        for(int i = 0;i< arr.length-1;i++){
+            int swap= 0;
+            for(int j = 0;j< arr.length-1-i;j++){
                 if(arr[j] > arr[j+1]){
                     int temp = arr[j];
-                    arr[j]  = arr[j+1];
+                    arr[j] = arr[j+1];
                     arr[j+1] = temp;
                     swap++;
                 }
             }
-
-            //check if swap is increasing or not , if not then array is already sorted 
-            if (swap == 0) {
-                // System.out.println("Already sorted !");
+            if(swap == 0){
+                System.out.println("already sorted ");
                 break;
             }
         }
+        
     }
 
     public static  void printArr(int arr[]){
